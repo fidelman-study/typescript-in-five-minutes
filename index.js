@@ -1,8 +1,15 @@
+var Student = /** @class */ (function () {
+    function Student(firstName, middleInitial, lastName) {
+        this.firstName = firstName;
+        this.middleInitial = middleInitial;
+        this.lastName = lastName;
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
+    return Student;
+}());
 function greeter(person) {
-    return "Hello " + person.name + " " + person.surname;
+    return "Hello, " + person.firstName + " " + person.lastName;
 }
-var user = {
-    name: 'Andrei',
-    surname: 'Fidelman'
-};
-document.body.innerHTML = greeter(user);
+var user = new Student("Jane", "M.", "User");
+console.log(user);
+// document.body.innerHTML = greeter(user);
